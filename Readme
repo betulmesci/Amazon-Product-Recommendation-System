@@ -1,0 +1,30 @@
+
+Recommendation System for Amazon Products
+
+In this project, I have developed two recommendation systems for Amazon products based on customer reviews and product descriptions, 
+using cosine similarity and word embeddings.
+
+Data Set Description and Data Preparation
+
+The data set used in this project consists of 10,000 fashion products sold in the UK through Amazon's website. The data was obtained 
+from https://data.world/promptcloud/fashion-products-on-amazon-com/workspace/file?filename=amazon_co-ecommerce_sample.csv.
+
+The text for each product was processed to obtain tokenized words by fixing contractions, removing stop words and punctuations. TF-IDF 
+vectors were created, and cosine similarity of products was obtained. The top 10 most similar products were extracted for each product, 
+and the related products were added to this list. Three filters were applied to this list of final recommendations:
+
+    The top 5 products with the highest ranking in the best-selling list.
+    The top 5 products with the highest ratings.
+    Products that are in a similar price range as the product.
+
+Recommender using Word Embeddings
+
+In this approach, word embeddings were created using word2vec. For each word entered by the user, the five most similar words were obtained, 
+and the products whose text consisted of these six words were selected as the most similar ones. These products were then ordered by their 
+ranking in the best-selling list, and the top five products were chosen. They are displayed by their ratings.
+
+Conclusion
+
+The two recommendation systems developed in this project use different approaches to recommend products based on customer reviews and product descriptions. 
+The cosine similarity approach is more specific to a particular product, while the word embeddings approach is more general and can be used to search for 
+products using keywords.
